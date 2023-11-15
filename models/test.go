@@ -7,7 +7,7 @@ import (
 )
 
 type test struct {
-	Id        primitive.ObjectID `json:"_id" bson:"_id"`             /* _id */
-	CreatedAt time.Time          `json:"createdAt" bson:"createdAt"` /* createdAt */
-	UpdatedAt time.Time          `json:"updatedAt" bson:"updatedAt"` /* updatedAt */
+	Id        *primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`             /* _id */
+	CreatedAt *time.Time          `json:"createdAt,omitempty" bson:"createdAt,omitempty"` /* createdAt */
+	UpdatedAt *time.Time          `json:"updatedAt,omitempty" bson:"updatedAt,omitempty"` /* updatedAt */
 }
